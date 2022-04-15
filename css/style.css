@@ -1,0 +1,163 @@
+.container {
+  background: linear-gradient(45deg, #44bba9, #a412c979);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.container .card {
+  width: 400px;
+  height: 247px;
+  padding: 1.5rem;
+  border-radius: 25px;
+  background-color: #405a79;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  z-index: 10;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.container .card img {
+  -webkit-user-drag: none;
+}
+
+.container .card:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.container .card:hover ~ .dropbox {
+  top: 100px;
+}
+
+.container .card .bank {
+  font-size: 1.2rem;
+}
+
+.container .card .chip {
+  width: 65px;
+}
+
+.container .card .chip img {
+  width: 100%;
+  height: auto;
+}
+
+.container .card .waves {
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 55px);
+  opacity: 0.4;
+}
+
+.container .card .waves img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.container .card .number {
+  font-size: 1.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .card footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.container .card footer .card-holder {
+  font-size: 0.9rem;
+}
+
+.container .card footer .symbols {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+}
+
+.container .card footer .symbols .circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  opacity: 0.6;
+  position: relative;
+}
+
+.container .card footer .symbols .circle.circle0 {
+  left: 15px;
+  background-color: #e5ff00;
+}
+
+.container .card footer .symbols .circle.circle1 {
+  background-color: #0048ff;
+}
+
+.container .dropbox {
+  width: 400px;
+  height: 247px;
+  position: relative;
+  top: 0;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #000000c4;
+  -webkit-transition: 400ms ease;
+  transition: 400ms ease;
+}
+
+.container .dropbox:hover {
+  top: 100px;
+}
+
+.container .dropbox button {
+  position: absolute;
+  bottom: 2rem;
+  padding: 0.8rem 3rem;
+  border-radius: 25px;
+  -webkit-transition: 150ms ease;
+  transition: 150ms ease;
+}
+
+.container .dropbox button:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-box-shadow: 2px 2px 5px #00000081;
+          box-shadow: 2px 2px 5px #00000081;
+}
+/*# sourceMappingURL=style.css.map */

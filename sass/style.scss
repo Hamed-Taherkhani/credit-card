@@ -1,0 +1,130 @@
+@import "config";
+
+.container {
+  background: linear-gradient(45deg, map-get($colors, aqua-c), #a412c979);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+
+  .card {
+    width: $card-width;
+    height: $card-height;
+    padding: 1.5rem;
+    border-radius: $radius;
+    background-color: map-get($colors, navy-blue-c);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 10;
+    transition: 200ms ease;
+
+    img {
+      -webkit-user-drag: none;
+    }
+
+    &:hover {
+      transform: scale(0.95);
+
+      & ~ .dropbox {
+        top: 100px;
+      }
+    }
+
+    .bank {
+      font-size: 1.2rem;
+    }
+
+    .chip {
+      width: 65px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .waves {
+      position: absolute;
+      right: 1rem;
+      top: calc(50% - 55px);
+      opacity: 0.4;
+
+      img {
+        transform: rotate(90deg);
+      }
+    }
+
+    .number {
+      font-size: 1.9rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+
+      .card-holder {
+        font-size: 0.9rem;
+      }
+
+      .symbols {
+        display: flex;
+        position: absolute;
+        right: 0;
+        bottom: -1rem;
+
+        .circle {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          opacity: 0.6;
+          position: relative;
+
+          &.circle0 {
+            left: 15px;
+            background-color: map-get($colors, yellow-c);
+          }
+
+          &.circle1 {
+            background-color: map-get($colors, blue-c);
+          }
+        }
+      }
+    }
+  }
+
+  .dropbox {
+    width: $card-width;
+    height: $card-height;
+    position: relative;
+    top: 0;
+    border-radius: $radius;
+    display: flex;
+    justify-content: center;
+    background-color: #000000c4;
+    transition: 400ms ease;
+
+    &:hover {
+      top: 100px;
+    }
+
+    button {
+      position: absolute;
+      bottom: 2rem;
+      padding: 0.8rem 3rem;
+      border-radius: $radius;
+      transition: 150ms ease;
+
+      &:hover {
+        transform: scale(0.95);
+        box-shadow: 2px 2px 5px #00000081;
+      }
+    }
+  }
+}
